@@ -15,7 +15,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './components/views/home/home.component';
 import { ProductCrudComponent } from './components/views/product-crud/product-crud.component';
+import { RedDirective } from './directives/red.directive';
+import { ForDirective } from './directives/for.directive';
+import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { MatButtonModule } from '@angular/material/button'
+import { MatSnackBarModule } from '@angular/material/snack-bar'
 
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -26,6 +32,9 @@ import { ProductCrudComponent } from './components/views/product-crud/product-cr
     NavComponent,
     HomeComponent,
     ProductCrudComponent,
+    RedDirective,
+    ForDirective,
+    ProductCreateComponent,
     
   ],
   imports: [
@@ -35,7 +44,10 @@ import { ProductCrudComponent } from './components/views/product-crud/product-cr
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
