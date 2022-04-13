@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-size: 20%;
     background-position: 10%;
-    padding-left: 8%;
+    padding-left: 10%;
 }
 
 mat-card {
@@ -18,4 +18,28 @@ mat-form-field {
 
 .actions {
     margin-left: 2px;
+}
+
+.logo-login {
+    height: 200px;
+    margin-left: 50px;
+}
+
+.example-form {
+    margin-left: 50px;
+    margin-right: 40px;
+}
+
+.title-login {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.mat-divider-vertical {
+    height: 100%;
+    width: 9px !important;
+    position: inherit !important;
 }

@@ -4,10 +4,10 @@
 
             <form class="example-form">
                 <mat-card-content fxLayout="column" fxLayoutAlign="space-around center">
-                    <mat-card-title>Login</mat-card-title>
-                    <mat-card-subtitle>Projeto Zero</mat-card-subtitle>
+                    <mat-card-title class="title-login">LOGIN</mat-card-title>
+                    <br>
                     <mat-card-content>
-                        <p>Insira os dados para entrar no sistema:</p>
+                        <p>Insira os dados para entrar no sistema</p>
                     </mat-card-content>
                     <mat-form-field class="example-full-width" appearance="fill">
                         <mat-label>Email</mat-label>
@@ -34,9 +34,9 @@
                     </mat-form-field>
 
                     <mat-card-actions class="actions">
-                        <div>
-                            <button mat-flat-button color="primary">Login</button>
-                            <button (click)="loginWithGoogle()" mat-raised-button class="google-login-btn">Google</button>
+                        <div class="teste">
+                            <button mat-flat-button color="primary">LOGIN</button>
+                            <button (click)="loginWithGoogle()" mat-raised-button class="google-login-btn">GOOGLE</button>
                         </div>
                     </mat-card-actions>
                 </mat-card-content>
@@ -44,12 +44,14 @@
         </mat-grid-tile>
 
 
-
         <mat-grid-tile>
 
+            <mat-divider class="mat-divider-vertical"></mat-divider>
 
             <mat-card-content fxLayout="column" fxLayoutAlign="space-around center">
-                <p>teste</p>
+                <span>
+                    <img class="logo-login" src="assets/img/logo-login.png" alt="logo">
+                </span>
             </mat-card-content>
 
         </mat-grid-tile>

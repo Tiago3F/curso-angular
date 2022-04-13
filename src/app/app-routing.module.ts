@@ -7,6 +7,8 @@ import { ProductCreateComponent } from './components/product/product-create/prod
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { LoginComponent } from './components/login/login.component';
+import { GoogleLoginProvider } from 'angularx-social-login';
+import { AuthGuardService } from './auth-guard.service';
 
 const routes: Routes = [{
   path: "",
@@ -14,7 +16,7 @@ const routes: Routes = [{
 },
 {
   path: "products",
-  component: ProductCrudComponent
+  component: ProductCrudComponent, canActivate: [AuthGuardService]
 },
 {
   path: "products/create",
@@ -30,16 +32,31 @@ const routes: Routes = [{
 },
 {
   path: "home",
-  component: HomeComponent
+  component: HomeComponent, canActivate: [AuthGuardService]
 },
 {
   path: "**",
   component: LoginComponent
 },
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+
+  providers: [{
+    provide: 'SocialAuthServiceConfig',
+    useValue: {
+      autoLogin: false,
+      providers: [
+        {
+          id: GoogleLoginProvider.PROVIDER_ID,
+          provider: new GoogleLoginProvider('148517665605-jspahbqleats6lvlag9kasc2c11b5g7o.apps.googleusercontent.com')
+        }
+      ]
+    }
+  },
+    AuthGuardService],
 })
 export class AppRoutingModule { }
