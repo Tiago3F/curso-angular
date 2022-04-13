@@ -2,12 +2,12 @@ import { Directive, ElementRef } from '@angular/core';
 import { elementAt } from 'rxjs';
 
 @Directive({
-  selector: '[appRed]'
+  selector: '[appBlue]'
 })
-export class RedDirective {
+export class BlueDirective {
 
   constructor(private el: ElementRef) { 
-    el.nativeElement.style.color = '#e35e6b'
+    el.nativeElement.style.color = '#3F51B5'
   }
 
 }

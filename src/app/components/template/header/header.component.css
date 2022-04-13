@@ -11,7 +11,7 @@
 }
 
 .header .logo {
-    max-height: 32px;
+    max-height: 100px;
 }
 
 .header .title-group {
@@ -20,4 +20,8 @@
 
 .header .title-group i {
     padding-right: 5px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
 }

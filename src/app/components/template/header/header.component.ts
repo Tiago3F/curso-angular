@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderService } from './header.service';
+import {SocialAuthService} from 'angularx-social-login';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +10,12 @@ import { HeaderService } from './header.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private headerService: HeaderService) { }
+  constructor(private headerService: HeaderService, private router: Router,
+    public socialAuthServive: SocialAuthService) { }
+
+  logout(): void {
+    this.socialAuthServive.signOut().then(() => this.router.navigate(['login']));
+  }
 
   ngOnInit(): void {
   }
